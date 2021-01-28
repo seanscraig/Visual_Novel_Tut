@@ -7,17 +7,25 @@ using UnityEngine.VFX;
 public class DialogueSystem : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
-    [SerializeField] List<string> lines;
+    [SerializeField] TextMeshProUGUI nameTag;
     [SerializeField] [Range(0f, 1f)] float visibleTextPercent;
     [SerializeField] float timePerLetter = 0.05f;
 
+    DialogueContainer currentDialogue;
+
     float totalTimeToType, currentTime;
     string lineToShow;
+    int index;
+
+    [SerializeField] DialogueContainer debugDialogueContainer;
 
     // Start is called before the first frame update
     void Start()
     {
-        CycleLine();
+        if (debugDialogueContainer != null)
+        {
+            InitiateDialogue(debugDialogueContainer);
+        }
     }
 
     // Update is called once per frame
@@ -65,19 +73,32 @@ public class DialogueSystem : MonoBehaviour
 
     private void CycleLine()
     {
-        if (lines.Count == 0)
+        if (index >= currentDialogue.lines.Count)
         {
             Debug.Log("There is no more lines to show");
             return;
         }
 
-        lineToShow = lines[0];
-        lines.RemoveAt(0);
+        lineToShow = currentDialogue.lines[index].line;
+
+        if (currentDialogue.lines[index].actor != null)
+        {
+            nameTag.text = currentDialogue.lines[index].actor.Name;
+        }
 
         totalTimeToType = lineToShow.Length * timePerLetter;
         currentTime = 0f;
         visibleTextPercent = 0f;
 
         text.text = "";
+
+        index += 1;
+    }
+
+    public void InitiateDialogue(DialogueContainer dialogueContainer)
+    {
+        currentDialogue = dialogueContainer;
+        index = 0;
+        CycleLine();
     }
 }
