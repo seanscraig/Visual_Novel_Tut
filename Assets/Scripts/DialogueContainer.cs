@@ -12,11 +12,19 @@ public class SpriteChange
 }
 
 [Serializable]
+public class BackgroundChange
+{
+    public Sprite sprite;
+    public int onScreenImageID;
+}
+
+[Serializable]
 public class DialogueLine
 {
     public string line;
     public Actor actor;
     public List<SpriteChange> spriteChanges;
+    public List<BackgroundChange> backgroundChanges;
 }
 
 [CreateAssetMenu]

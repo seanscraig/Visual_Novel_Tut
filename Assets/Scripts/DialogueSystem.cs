@@ -13,6 +13,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] float timePerLetter = 0.05f;
     [SerializeField] float skipTextWaitTime = 0.1f;
     [SerializeField] SpriteManager spriteManager;
+    [SerializeField] SpriteManager backgroundManager;
 
     DialogueContainer currentDialogue;
     Coroutine skipTextCoroutine;
@@ -111,6 +112,23 @@ public class DialogueSystem : MonoBehaviour
                 spriteManager.Set(
                     line.spriteChanges[i].actor.sprites[expressionID],
                     line.spriteChanges[i].onScreenImageID
+                    );
+            }
+        }
+
+        // TODO refactor this part to not repeat code
+        if (line.backgroundChanges != null)
+        {
+            for (int i = 0; i < line.backgroundChanges.Count; i++)
+            {
+                if (line.backgroundChanges[i].sprite == null)
+                {
+                    backgroundManager.Hide(line.backgroundChanges[i].onScreenImageID);
+                    continue;
+                }
+                backgroundManager.Set(
+                    line.backgroundChanges[i].sprite,
+                    line.backgroundChanges[i].onScreenImageID
                     );
             }
         }

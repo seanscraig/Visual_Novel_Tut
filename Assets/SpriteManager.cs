@@ -8,7 +8,7 @@ public class SpriteManager : MonoBehaviour
     public List<RectTransform> imagesRT;
     List<Image> images;
 
-    private void Start()
+    private void Awake()
     {
         images = new List<Image>();
         for (int i = 0; i < imagesRT.Count; i++)
