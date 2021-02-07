@@ -6,4 +6,5 @@ using UnityEngine;
 public class Actor : ScriptableObject
 {
     public string Name;
+    public List<Sprite> sprites;
 }

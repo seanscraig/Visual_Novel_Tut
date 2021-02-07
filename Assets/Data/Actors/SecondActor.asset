@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: SecondActor
   m_EditorClassIdentifier: 
   Name: Second Actor
+  sprites:
+  - {fileID: 21300000, guid: 34a33b546c2aa4bd29960b1cb672055f, type: 3}
+  - {fileID: 21300000, guid: a01cace7ddff0476cb3acd07ffa40d55, type: 3}
+  - {fileID: 21300000, guid: b0f469d5875c949669e4253ad4402506, type: 3}
+  - {fileID: 21300000, guid: 411cd66ddc70c4f9f98cf066eeaecb5a, type: 3}

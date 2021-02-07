@@ -6,18 +6,22 @@ using UnityEngine.VFX;
 
 public class DialogueSystem : MonoBehaviour
 {
+    [SerializeField] DialogueContainer debugDialogueContainer;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] TextMeshProUGUI nameTag;
     [SerializeField] [Range(0f, 1f)] float visibleTextPercent;
     [SerializeField] float timePerLetter = 0.05f;
+    [SerializeField] float skipTextWaitTime = 0.1f;
+    [SerializeField] SpriteManager spriteManager;
 
     DialogueContainer currentDialogue;
+    Coroutine skipTextCoroutine;
 
     float totalTimeToType, currentTime;
     string lineToShow;
     int index;
 
-    [SerializeField] DialogueContainer debugDialogueContainer;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +33,24 @@ public class DialogueSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             PushText();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            skipTextCoroutine = StartCoroutine(SkipText());
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            if (skipTextCoroutine != null)
+            {
+                StopCoroutine(skipTextCoroutine);
+            }
         }
 
         TypeOutText();
@@ -79,11 +96,30 @@ public class DialogueSystem : MonoBehaviour
             return;
         }
 
-        lineToShow = currentDialogue.lines[index].line;
+        DialogueLine line = currentDialogue.lines[index];
 
-        if (currentDialogue.lines[index].actor != null)
+        if (line.spriteChanges != null)
         {
-            nameTag.text = currentDialogue.lines[index].actor.Name;
+            for (int i = 0; i < line.spriteChanges.Count; i++)
+            {
+                if(line.spriteChanges[i].actor == null)
+                {
+                    spriteManager.Hide(line.spriteChanges[i].onScreenImageID);
+                    continue;
+                }
+                int expressionID = line.spriteChanges[i].expression;
+                spriteManager.Set(
+                    line.spriteChanges[i].actor.sprites[expressionID],
+                    line.spriteChanges[i].onScreenImageID
+                    );
+            }
+        }
+
+        lineToShow = line.line;
+
+        if (line.actor != null)
+        {
+            nameTag.text = line.actor.Name;
         }
 
         totalTimeToType = lineToShow.Length * timePerLetter;
@@ -100,5 +136,14 @@ public class DialogueSystem : MonoBehaviour
         currentDialogue = dialogueContainer;
         index = 0;
         CycleLine();
+    }
+
+    IEnumerator SkipText()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(skipTextWaitTime);
+            PushText();
+        }
     }
 }
