@@ -15,6 +15,7 @@ public class SpriteManager : MonoBehaviour
         {
             images.Add(imagesRT[i].GetComponent<Image>());
         }
+        HideAll();
     }
 
     public void Set(Sprite s, int id)
@@ -26,5 +27,13 @@ public class SpriteManager : MonoBehaviour
     public void Hide(int id)
     {
         images[id].gameObject.SetActive(false);
+    }
+
+    public void HideAll()
+    {
+        for (int i = 0; i < images.Count; i++)
+        {
+            images[i].gameObject.SetActive(false);
+        }
     }
 }

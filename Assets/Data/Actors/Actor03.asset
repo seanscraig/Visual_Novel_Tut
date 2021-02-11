@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: Actor03
   m_EditorClassIdentifier: 
   Name: Third Actor
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: a6874d60134b64a078cf2eb33bd292ce, type: 3}
+  - {fileID: 21300000, guid: 6cc0804a875fa4dcb8d14035c029cdd9, type: 3}
+  - {fileID: 21300000, guid: 8e172bb6d59a441c3b5aabda0547d38f, type: 3}
+  - {fileID: 21300000, guid: b6f7f7bbed7694666af9c3ebfe23b8a3, type: 3}
+  - {fileID: 21300000, guid: 232dff9523580472ea8be7a11c6bb712, type: 3}

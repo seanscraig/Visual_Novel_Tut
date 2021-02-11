@@ -13,10 +13,54 @@ MonoBehaviour:
   m_Name: Scene1 Dialogue Container
   m_EditorClassIdentifier: 
   lines:
-  - line: This is the first line
+  - line: Did you see that over there?
     actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
     spriteChanges:
     - actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+      expression: 4
+      onScreenImageID: 1
+    backgroundChanges: []
+  - line: See what?
+    actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
+    spriteChanges:
+    - actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
+      expression: 1
+      onScreenImageID: 4
+    backgroundChanges: []
+  - line: I saw a tiny head pop out of the ground over there. Maybe it was a gopher,
+      I love gophers!
+    actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+    spriteChanges:
+    - actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+      expression: 3
+      onScreenImageID: 1
+    backgroundChanges: []
+  - line: Gophers are alright, if you like stupid tiny rodents. Badgers are much
+      more impressive animals!
+    actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
+    spriteChanges:
+    - actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
+      expression: 2
+      onScreenImageID: 4
+    backgroundChanges: []
+  - line: Badgers?! Gophers?! They are both inferior to the noble groundhog!
+    actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
+    spriteChanges:
+    - actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
+      expression: 3
+      onScreenImageID: 2
+    backgroundChanges: []
+  - line: What are you guys talking about?
+    actor: {fileID: 11400000, guid: bafeac0a2ba074f8fa9db950afc3b638, type: 2}
+    spriteChanges:
+    - actor: {fileID: 11400000, guid: bafeac0a2ba074f8fa9db950afc3b638, type: 2}
+      expression: 5
+      onScreenImageID: 3
+    backgroundChanges: []
+  - line: Nothing I'm outta here.
+    actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+    spriteChanges:
+    - actor: {fileID: 0}
       expression: 0
       onScreenImageID: 0
     backgroundChanges: []

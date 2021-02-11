@@ -113,6 +113,10 @@ public class DialogueSystem : MonoBehaviour
                     line.spriteChanges[i].actor.sprites[expressionID],
                     line.spriteChanges[i].onScreenImageID
                     );
+                if (line.spriteChanges[i].onScreenImageID > 2)
+                {
+                    Debug.Log("left name tag");
+                }
             }
         }
 
@@ -133,12 +137,12 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        lineToShow = line.line;
-
         if (line.actor != null)
         {
             nameTag.text = line.actor.Name;
         }
+
+        lineToShow = line.line;
 
         totalTimeToType = lineToShow.Length * timePerLetter;
         currentTime = 0f;

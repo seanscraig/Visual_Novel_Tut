@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: Actor04
   m_EditorClassIdentifier: 
   Name: Fourth Actor
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0d031abe474cc4cdd8c53d7ce4578657, type: 3}
+  - {fileID: 21300000, guid: bfb13a5f30a2a40868b032108e7d6bbc, type: 3}
+  - {fileID: 21300000, guid: b2096d4d816e6410992853029dafc155, type: 3}
+  - {fileID: 21300000, guid: 9c30aa794a73c4164a7abcd833f306e9, type: 3}
+  - {fileID: 21300000, guid: 5f216575ed5824ebbb6176baf30bd782, type: 3}
+  - {fileID: 21300000, guid: e9032906b7208462a88ae968bc691486, type: 3}
+  - {fileID: 21300000, guid: c8fca091244e94541a8aac13b5a62fd1, type: 3}
+  - {fileID: 21300000, guid: cbaed07da525a41b5a36da71236b260e, type: 3}

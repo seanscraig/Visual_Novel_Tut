@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: First Actor
   sprites:
-  - {fileID: 21300000, guid: a1b55930af0a04c7ca5f3934380d0837, type: 3}
-  - {fileID: 21300000, guid: 20a4a8187ac594639b929e4262f2bead, type: 3}
-  - {fileID: 21300000, guid: e54377a8646be4b92814b94a3273ce6a, type: 3}
-  - {fileID: 21300000, guid: 160726007fb684cf5b111e7bd24cb445, type: 3}
+  - {fileID: 21300000, guid: 703bd863074b04fc0b5a7946447d14c9, type: 3}
+  - {fileID: 21300000, guid: ec9d81af1823f46ed82194b9270ed188, type: 3}
+  - {fileID: 21300000, guid: 62573cdb420ef416cace6b5f802d94a0, type: 3}
+  - {fileID: 21300000, guid: 66e3be3fa481043f1998a5ebc672690d, type: 3}
+  - {fileID: 21300000, guid: ba4efaa3566aa470682187fc9d01374b, type: 3}
+  - {fileID: 21300000, guid: 9e1073e11db4044899e11efb920b5121, type: 3}

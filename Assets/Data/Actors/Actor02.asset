@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Second Actor
   sprites:
-  - {fileID: 21300000, guid: 34a33b546c2aa4bd29960b1cb672055f, type: 3}
-  - {fileID: 21300000, guid: a01cace7ddff0476cb3acd07ffa40d55, type: 3}
-  - {fileID: 21300000, guid: b0f469d5875c949669e4253ad4402506, type: 3}
-  - {fileID: 21300000, guid: 411cd66ddc70c4f9f98cf066eeaecb5a, type: 3}
+  - {fileID: 21300000, guid: 02948eb525a3141a4a017000668d4506, type: 3}
+  - {fileID: 21300000, guid: 34869ff5d34794f8985d5ca10bc35e72, type: 3}
+  - {fileID: 21300000, guid: 9673c01f6e9e44797b27334c9fc62194, type: 3}
+  - {fileID: 21300000, guid: 03e83abd582184e00ba13bfa01f56ac6, type: 3}
+  - {fileID: 21300000, guid: e90f083f8e581482e8100c7b4e2d2cdd, type: 3}
+  - {fileID: 21300000, guid: 378ab3160245641df9da7fc12deca6ad, type: 3}
