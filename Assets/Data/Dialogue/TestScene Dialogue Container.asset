@@ -10,30 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e734051ce6f94184b23bb1c503987a6, type: 3}
-  m_Name: Scene1 Dialogue Container
+  m_Name: TestScene Dialogue Container
   m_EditorClassIdentifier: 
   lines:
-  - line: Did you see that over there?
+  - line: Did you see that?
     actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
     spriteChanges:
     - actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
       expression: 4
-      onScreenImageID: 1
+      onScreenImageID: 0
     backgroundChanges: []
   - line: See what?
     actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
     spriteChanges:
     - actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
       expression: 1
-      onScreenImageID: 4
+      onScreenImageID: 5
     backgroundChanges: []
   - line: I saw a tiny head pop out of the ground over there. Maybe it was a gopher,
       I love gophers!
-    actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+    actor: {fileID: 0}
     spriteChanges:
     - actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
       expression: 3
-      onScreenImageID: 1
+      onScreenImageID: 2
+    - actor: {fileID: 0}
+      expression: 0
+      onScreenImageID: 0
     backgroundChanges: []
   - line: Gophers are alright, if you like stupid tiny rodents. Badgers are much
       more impressive animals!
@@ -41,11 +44,20 @@ MonoBehaviour:
     spriteChanges:
     - actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
       expression: 2
-      onScreenImageID: 4
+      onScreenImageID: 3
+    - actor: {fileID: 0}
+      expression: 0
+      onScreenImageID: 5
     backgroundChanges: []
   - line: Badgers?! Gophers?! They are both inferior to the noble groundhog!
     actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
     spriteChanges:
+    - actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+      expression: 2
+      onScreenImageID: 1
+    - actor: {fileID: 0}
+      expression: 0
+      onScreenImageID: 2
     - actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
       expression: 3
       onScreenImageID: 2
@@ -53,14 +65,50 @@ MonoBehaviour:
   - line: What are you guys talking about?
     actor: {fileID: 11400000, guid: bafeac0a2ba074f8fa9db950afc3b638, type: 2}
     spriteChanges:
+    - actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
+      expression: 2
+      onScreenImageID: 4
+    - actor: {fileID: 0}
+      expression: 0
+      onScreenImageID: 3
     - actor: {fileID: 11400000, guid: bafeac0a2ba074f8fa9db950afc3b638, type: 2}
       expression: 5
       onScreenImageID: 3
     backgroundChanges: []
-  - line: Nothing I'm outta here.
+  - line: Nothing, I'm outta here
     actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+    spriteChanges:
+    - actor: {fileID: 11400000, guid: 9d8c99b4ddf0d4f8a825c1fd615fd26d, type: 2}
+      expression: 2
+      onScreenImageID: 1
+    backgroundChanges: []
+  - line: Yeah, peace.
+    actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
     spriteChanges:
     - actor: {fileID: 0}
       expression: 0
-      onScreenImageID: 0
+      onScreenImageID: 1
+    - actor: {fileID: 11400000, guid: a9fc85582e2bb4a78a1a27ceb639a08e, type: 2}
+      expression: 3
+      onScreenImageID: 4
+    backgroundChanges: []
+  - line: See what you did?
+    actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
+    spriteChanges:
+    - actor: {fileID: 0}
+      expression: 0
+      onScreenImageID: 4
+    - actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
+      expression: 3
+      onScreenImageID: 2
+    backgroundChanges: []
+  - line: What did I do?
+    actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
+    spriteChanges:
+    - actor: {fileID: 0}
+      expression: 0
+      onScreenImageID: 2
+    - actor: {fileID: 11400000, guid: bafeac0a2ba074f8fa9db950afc3b638, type: 2}
+      expression: 6
+      onScreenImageID: 3
     backgroundChanges: []

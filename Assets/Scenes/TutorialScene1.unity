@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af0bcc44a3d84b3697254f06f42a677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDialogueContainer: {fileID: 11400000, guid: 38f515abeb3ec4bb2822e8c533016121, type: 2}
+  debugDialogueContainer: {fileID: 11400000, guid: 8bf97533ca71f45d880ac83e6006e178, type: 2}
   text: {fileID: 1088315085}
   nameTag: {fileID: 617065721}
   visibleTextPercent: 0
