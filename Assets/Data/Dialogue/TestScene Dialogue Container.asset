@@ -103,7 +103,7 @@ MonoBehaviour:
       onScreenImageID: 2
     backgroundChanges: []
   - line: What did I do?
-    actor: {fileID: 11400000, guid: c19df5fb59c484a82b45fe2be19a1012, type: 2}
+    actor: {fileID: 11400000, guid: bafeac0a2ba074f8fa9db950afc3b638, type: 2}
     spriteChanges:
     - actor: {fileID: 0}
       expression: 0
